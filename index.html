@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html>
+
+
+<head>
+  <title>My page</title>
+  <link href="main.css" rel="stylesheet"/>
+</head>
+
+
+
+<body>
+  <div class="main">
+
+    <h3>Click Counter</h3>
+    <button id="clickme">Click me: 0</button>
+
+    <h5>Good practice: no JavaScript code in HTML</h5>
+
+  </div>
+</body>
+
+  <script>
+    var button = document.getElementById("clickme"),
+      count = 0;
+    button.onclick = function() {
+      count ++;
+      button.innerHTML = "Click me: " + count;
+showAlert(count)
+    };
+
+ function showAlert(count) {
+      var prim = true
+  
+      for (let i = 2; Math.sqrt(count) >= i; i++) {
+        if (count % i === 0) {
+          var prim = false
+        }
+      }
+
+      if (prim && count > 1) {
+        alert("You have clicked " + count + " times!")
+      }
+    }
+
+  </script>
+
+
+</body>
+
+
+</html>
